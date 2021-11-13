@@ -31,4 +31,4 @@ jobs:
           # Artifact name
           name: demo.jar 
           # A file, directory or wildcard pattern that describes what to upload
-          path: target/demo-0.0.1-SNAPSHOT.jar
+          path: /home/runner/work/actionstest/actionstest/demo/target/demo-0.0.1-SNAPSHOT.jar
