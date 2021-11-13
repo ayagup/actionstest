@@ -37,3 +37,12 @@ jobs:
         with:
           name: demo.jar
           path: /home/runner/work/actionstest/actionstest/demo/
+      - run: export GCLOUD_SERVICE_KEY=$(cat /home/runner/work/actionstest/actionstest/key.json)
+      - name: Publish to Registry
+        uses: raccoondev/push-docker-gcr@v1
+        with:
+          gcr_host: gcr.io
+          image_name: demo
+          image_tag: v1
+        env:
+          GOOGLE_PROJECT_ID: translateqna
