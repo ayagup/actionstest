@@ -24,7 +24,7 @@ jobs:
           # Name of the build platform to cache dependencies. It can be "maven" or "gradle".
           cache: maven
       - name: Build with Maven
-        run: cd demo && ./mvnw clean package
+        run: ./mvnw clean package
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
